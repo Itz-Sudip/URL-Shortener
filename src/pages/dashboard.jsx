@@ -40,7 +40,7 @@ const Dashboard = () => {
   }, [urls?.length]);
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 max-w-7xl mx-auto px-4 sm:px-8 pt-10">
       {(loading || loadingClicks) && (
         <BarLoader width={"100%"} color="#36d7b7" />
       )}

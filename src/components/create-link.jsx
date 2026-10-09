@@ -92,8 +92,8 @@ export function CreateLink() {
         if (!res) setSearchParams({});
       }}
     >
-      <DialogTrigger asChild>
-        <Button variant="destructive">Create New Link</Button>
+      <DialogTrigger render={<Button variant="destructive" />}>
+        Create New Link
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
@@ -112,7 +112,7 @@ export function CreateLink() {
         {errors.title && <Error message={errors.title} />}
         <Input
           id="longUrl"
-          placeholder="Enter your Loooong URL"
+          placeholder="Enter your Long URL"
           value={formValues.longUrl}
           onChange={handleChange}
         />

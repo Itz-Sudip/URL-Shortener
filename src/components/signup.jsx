@@ -78,7 +78,7 @@ const Signup = () => {
   };
 
   return (
-    <Card>
+    <Card >
       <CardHeader>
         <CardTitle>Signup</CardTitle>
         <CardDescription>

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import {Copy, Download, LinkIcon, Trash} from "lucide-react";
+import {Copy, CopyIcon, Download, DownloadIcon, LinkIcon, Trash, TrashIcon} from "lucide-react";
 import {Link} from "react-router-dom";
 import {Button} from "./ui/button";
 import useFetch from "@/hooks/use-fetch";
@@ -57,17 +57,17 @@ const LinkCard = ({url = [], fetchUrls}) => {
             navigator.clipboard.writeText(`https://trimrr.in/${url?.short_url}`)
           }
         >
-          <Copy />
+          <CopyIcon />
         </Button>
         <Button variant="ghost" onClick={downloadImage}>
-          <Download />
+          <DownloadIcon />
         </Button>
         <Button
           variant="ghost"
           onClick={() => fnDelete().then(() => fetchUrls())}
           disable={loadingDelete}
         >
-          {loadingDelete ? <BeatLoader size={5} color="white" /> : <Trash />}
+          {loadingDelete ? <BeatLoader size={5} color="white" /> : <TrashIcon />}
         </Button>
       </div>
     </div>
